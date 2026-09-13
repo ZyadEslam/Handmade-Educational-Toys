@@ -70,7 +70,7 @@ export function Logo({
           {isAr ? "HM Toys" : "HM Toys"}
         </span>
         {!compact && (
-          <span className="mt-1 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-ink-soft">
+          <span className="hidden md:block text-[0.6rem] font-bold uppercase tracking-[0.22em] text-ink-soft">
             {isAr ? "ألعاب تعليمية يدوية" : "Handmade · Educational · Toys"}
           </span>
         )}

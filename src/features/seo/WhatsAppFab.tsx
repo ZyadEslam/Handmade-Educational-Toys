@@ -11,7 +11,7 @@ export function WhatsAppFab({ locale }: { locale: Locale }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="group fixed bottom-5 end-5 z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-ink bg-[#25D366] shadow-pop transition-all hover:-translate-y-1"
+      className="group fixed bottom-5 end-8 md:end-5 z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-ink bg-[#25D366] shadow-pop transition-all hover:-translate-y-1"
     >
       <span className="absolute inset-0 -z-10 animate-ping rounded-full border-2 border-ink opacity-30" aria-hidden="true" />
       <svg viewBox="0 0 24 24" className="h-7 w-7 text-white" fill="currentColor" aria-hidden="true">

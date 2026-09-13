@@ -928,7 +928,7 @@ function Logo({ locale, className, compact = false }) {
                         columnNumber: 9
                     }, this),
                     !compact && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                        className: "mt-1 text-[0.6rem] font-bold uppercase tracking-[0.22em] text-ink-soft",
+                        className: "hidden md:block text-[0.6rem] font-bold uppercase tracking-[0.22em] text-ink-soft",
                         children: isAr ? "ألعاب تعليمية يدوية" : "Handmade · Educational · Toys"
                     }, void 0, false, {
                         fileName: "[project]/src/components/ui/Logo.tsx",
@@ -1572,7 +1572,7 @@ function WhatsAppFab({ locale }) {
         target: "_blank",
         rel: "noopener noreferrer",
         "aria-label": label,
-        className: "group fixed bottom-5 end-5 z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-ink bg-[#25D366] shadow-pop transition-all hover:-translate-y-1",
+        className: "group fixed bottom-5 end-8 md:end-5 z-40 grid h-14 w-14 place-items-center rounded-full border-2 border-ink bg-[#25D366] shadow-pop transition-all hover:-translate-y-1",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                 className: "absolute inset-0 -z-10 animate-ping rounded-full border-2 border-ink opacity-30",

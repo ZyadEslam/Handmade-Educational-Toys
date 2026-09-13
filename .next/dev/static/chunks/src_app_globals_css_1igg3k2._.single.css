@@ -423,6 +423,10 @@
     inset: 0;
   }
 
+  .inset-5 {
+    inset: calc(var(--spacing) * 5);
+  }
+
   .inset-x-\[16\%\] {
     inset-inline: 16%;
   }
@@ -2230,6 +2234,14 @@
       width: calc(var(--spacing) * 36);
     }
 
+    .sm\:max-w-md {
+      max-width: var(--container-md);
+    }
+
+    .sm\:max-w-sm {
+      max-width: var(--container-sm);
+    }
+
     .sm\:grid-cols-2 {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -2293,6 +2305,10 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:end-5 {
+      inset-inline-end: calc(var(--spacing) * 5);
+    }
+
     .md\:block {
       display: block;
     }
