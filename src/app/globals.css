@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  /* ——— Brand palette: bright for kids, calm for parents ——— */
+  --color-coral: #ff6b5c;
+  --color-coral-deep: #e84c3d;
+  --color-sun: #ffc94d;
+  --color-sky: #5bc6f5;
+  --color-teal: #2ec4b6;
+  --color-grape: #8b7cf6;
+  --color-pink: #ff92b6;
+  --color-cream: #fff7ec;
+  --color-lilac: #f5f1ff;
+  --color-mint: #e8fbf5;
+  --color-ink: #2b2440;
+  --color-ink-soft: #64597f;
+  --color-line: #ece5f4;
+
+  /* ——— Type ——— */
+  --font-display: var(--font-baloo), var(--font-cairo), ui-rounded, system-ui,
+    sans-serif;
+  --font-sans: var(--font-nunito), var(--font-cairo), system-ui, sans-serif;
+  --font-hand: var(--font-caveat), var(--font-cairo), cursive;
+
+  /* ——— Motion ——— */
+  --animate-marquee: marquee 26s linear infinite;
+  --animate-bounce-slow: bounce-slow 3.2s ease-in-out infinite;
+  --animate-spin-slow: spin 14s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes bounce-slow {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-sun);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-grape);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-bounce-slow,
+  .animate-spin-slow {
+    animation: none !important;
+  }
+} */
+
+/* ——— Handmade touches ——— */
+.bg-dots {
+  background-image: radial-gradient(var(--color-line) 1.4px, transparent 1.4px);
+  background-size: 20px 20px;
+}
+
+.shadow-pop {
+  box-shadow: 5px 5px 0 0 var(--color-ink);
+}
+.shadow-pop-sm {
+  box-shadow: 3px 3px 0 0 var(--color-ink);
+}
+.shadow-pop-lg {
+  box-shadow: 9px 9px 0 0 var(--color-ink);
+}
+
+.underline-squiggle {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8c12-6 24-6 36 0s24 6 36 0 24-6 44-2' fill='none' stroke='%23ffc94d' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.28em;
+  padding-bottom: 0.24em;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
+/* RTL: keep the marquee flowing the other way */
+[dir="rtl"] .animate-marquee {
+  animation-direction: reverse;
+}
+
+/* RTL: use Cairo as the primary font for Arabic text */
+[dir="rtl"] {
+  --font-display: var(--font-cairo), var(--font-baloo), ui-rounded, system-ui,
+    sans-serif;
+  --font-sans: var(--font-cairo), var(--font-nunito), system-ui, sans-serif;
+  --font-hand: var(--font-cairo), var(--font-caveat), cursive;
+}
+
+/* Section rhythm */
+.section-pad {
+  padding-block: clamp(4rem, 9vw, 7rem);
+}
